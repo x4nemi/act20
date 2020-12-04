@@ -20,8 +20,10 @@ void Civilizacion::menuCiv(){
 
         if(!opc) break;
 
+        cout << endl << endl;
+
         if(opc >= 2 and opc <= 4 and !puerto.size()){
-            cout << "Aun no hay barcos capturados" << endl;
+            cout << "Aun no hay barcos capturados" << endl << endl;
             continue;
         }
 
@@ -36,6 +38,7 @@ void Civilizacion::menuCiv(){
         case 3:
         {
             string id;
+            cout << "ID: ";
             getline(cin, id);
 
             Barco *barco = buscarBarco(id);
@@ -50,6 +53,9 @@ void Civilizacion::menuCiv(){
                 cout << setw(15) << "Velocidad";
                 cout << setw(15) << "Armadura" << endl;
                 cout << *barco;
+
+                Barco &b = *barco;
+                b.menuBarco();
             }
         }
             break;

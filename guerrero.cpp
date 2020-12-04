@@ -3,13 +3,13 @@
 
 using namespace std;
 
-Guerrero::Guerrero() { }
+Guerrero::Guerrero() { } //float r2 = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/X));
 
-Guerrero::Guerrero(const string& id, const int& salud, const float& fuerza, const float& defensa, const string& tipo){
+Guerrero::Guerrero(const string& id){
     this->id = id;
-    this->salud = salud;
-    this->fuerza = fuerza;
-    this->defensa = defensa;
+    salud =  static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / 100.0));
+    fuerza = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / 60.0));
+    defensa = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / 30.0));
     string tipos[] = {"Lancero", "Arquero", "Paladin", "Mago"};
     tipoGuerrero = tipos[rand() % 4];
 }

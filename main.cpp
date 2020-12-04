@@ -7,5 +7,7 @@ int main(){
 
     civ.menuCiv();
 
+    cout << "Saliste...";
+
     return 0;
 }

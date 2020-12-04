@@ -33,7 +33,9 @@ class Barco{
         //Guerrero
         void pushGuerrero(const Guerrero&);
         void popGuerrero();
-        Guerrero getTopeGuerrero();
+        Guerrero& getTopeGuerrero();
+        void menuBarco();
+        void capturarGuerrero();
 
         friend ostream& operator << (ostream &out, const Barco& b){
             out << left;

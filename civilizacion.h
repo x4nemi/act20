@@ -23,6 +23,7 @@ class Civilizacion{
         void eliminarCombX(const float&);
 
         void menuCiv();
+        
 };
 
 #endif
